@@ -4,8 +4,8 @@
 //     return (
 //         <div>
 
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 
 //         </div>
@@ -18,31 +18,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     // const { user, logoutUser } = useAuth();
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
 
-    const [isHovering, setIsHovering] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovering(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovering(false);
-    };
-
-
-
-    const navLinks = (
-        <>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/agent'>Agent</NavLink></li>
-            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
-            <li><NavLink to='/user'>User Profile</NavLink></li>
-        </>
-    );
 
     return (
         <header className='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
@@ -66,9 +42,9 @@ const Navbar = () => {
 
                     <button id="toggleOpen" className='lg:hidden'>
                         <svg className="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
+                            <path fillRule="evenodd"
                                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
+                                clipRule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
